@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <string.h>
 
 struct hello_world_struct {
 	char hello_world[20];
-}
+};
 
 enum crack_baby_enum{
 	buzzed,
@@ -18,7 +19,7 @@ void four_chan(){
 	fclose(fptr);
 }
 
-void asfdgfhjgfdsasfdgfgdfasgdsfh(char *String){
+void asfdgfhjgfdsasfdgfgdfasgdsfh(char string[20]){
 	char favorite_color[100]; // no U's as a little fuck you to the europeans
 	scanf("%s", favorite_color);
 	printf("just kidding i don't fucking care");
@@ -29,18 +30,19 @@ void asfdgfhjgfdsasfdgfgdfasgdsfh(char *String){
 			switch(baked){
 				case baked:
 					if(baked + baked == cooked){
-						printf("%s", hello_world);
+						printf("%s", *string);
 					}
 				default:
 					printf("fuck you math doesn't work <3");
 			}
 		}
+		break;
 	}
 }
 
 int main(){
 	struct hello_world_struct hello_world_struct_instance;
-	char hello_world_struct_instance.hello_world = "hello world";
-	char *Hello_World = &hello_world_struct_instance.hello_world;
-	asfdgfhjgfdsasfdgfgdfasgdsfh(hello_world_struct_instance.hello_world);
+	strcpy("hello world", hello_world_struct_instance.hello_world);
+	char *Hello_World = hello_world_struct_instance.hello_world;
+	asfdgfhjgfdsasfdgfgdfasgdsfh(*Hello_World);
 }
